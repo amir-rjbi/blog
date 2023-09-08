@@ -5,7 +5,7 @@ export  async function FetchApi<T>(
     url: string,
     config:FetchOptions={}):Promise<T>{
         var customConfig={
-            baseURL:"http://localhost:3000/api",
+            baseURL:"https://blog-api.codeyad-project.ir/api",
             ...config,
         };
          //@ts-ignore

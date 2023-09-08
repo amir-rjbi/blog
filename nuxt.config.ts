@@ -20,11 +20,12 @@ export default defineNuxtConfig({
       ,
   ],
  
-  vite:{
-    server:{
-      proxy:{'/api':"https://blog-api.codeyad-project.ir"}
-    }
-  },build:{
+  // vite:{
+  //   server:{
+  //     proxy:{'/api':"https://blog-api.codeyad-project.ir"}
+  //   }
+  // }
+  build:{
     // vue-toastification - old commonjs module 
     transpile: ['vue-toastification'],
   }
