@@ -16,3 +16,7 @@ export interface User {
     role:         number;
     registerDate: Date;
 }
+export interface take {
+    pageId: number;
+     take: number;
+}

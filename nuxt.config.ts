@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       ],
     }],
     '@nuxtjs/tailwindcss',
-    '@invictus.codes/nuxt-vuetify',
+    ['@invictus.codes/nuxt-vuetify',{ vuetify:{ rtl: true },}],
      ['@vee-validate/nuxt',{
   
       autoImports: true,
@@ -19,10 +19,14 @@ export default defineNuxtConfig({
   ],
       ,
   ],
+ 
   vite:{
     server:{
       proxy:{'/api':"https://blog-api.codeyad-project.ir"}
     }
+  },build:{
+    // vue-toastification - old commonjs module 
+    transpile: ['vue-toastification'],
   }
 
 })

@@ -9,4 +9,15 @@
 * {
   font-family: "Dana-Regular" !important;
 }
+.v-locale--is-ltr {
+  direction: rtl;
+}
+.v-overlay-container {
+  contain: layout;
+
+  pointer-events: none;
+  position: fixed;
+
+  display: block;
+}
 </style>

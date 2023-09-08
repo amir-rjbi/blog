@@ -1,17 +1,20 @@
+import { editUser } from './../models/ApiUserPut';
 import {FetchApi} from "../utilities/CustomFetchApi"
-import {UsersFilterResult} from "../models/ApiUserGet"
+import {User, UsersFilterResult,take} from "../models/ApiUserGet"
 import {postuser} from "../models/ApiUserPost"
 
 
+
 export function GetUser(
-   
+  command:take
   ): Promise<UsersFilterResult>{
+  
     return FetchApi("/user", {
         method: "Get",
-        query: { pageId: 1, take: 10 }
-    });
+        query: command
+    })
   }
-
+ 
 export function PostUser(
   command: postuser
   ){
@@ -21,3 +24,21 @@ export function PostUser(
     });
   }
   
+  export function EditUser(
+    command: editUser
+    ){
+      return FetchApi("/user", {
+          method: "Put",
+          body: command,
+      });
+    }
+    
+    export function GetUserById(
+   userId:Number
+      ): Promise<User>{
+      
+        return FetchApi(`/user/${userId}`, {
+            method: "Get",
+            
+        })
+      }

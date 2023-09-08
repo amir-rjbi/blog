@@ -32,9 +32,16 @@
             value="home"
           ></v-list-item>
           <v-list-item
-            prepend-icon="mdi-account"
-            title="ایجاد بلاگ"
+            prepend-icon="mdi-folder-check-outline"
+            title="دسته بندی"
             value="account"
+            to="/categories"
+          ></v-list-item>
+          <v-list-item
+            prepend-icon="mdi-panorama-outline"
+            title=" پست ها"
+            value="posts"
+            to="/posts"
           ></v-list-item>
           <v-list-item
             to="/users"
